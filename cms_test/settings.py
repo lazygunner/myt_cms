@@ -37,7 +37,7 @@ TIME_ZONE = 'America/Chicago'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-cn'
 
 SITE_ID = 1
 
@@ -165,7 +165,21 @@ INSTALLED_APPS = (
     'cms.plugins.video',
     'cms.plugins.twitter',
 )
+CMS_LANGUAGES = {
+    1:[
+       {
+        'code': 'zh-cn',
+        'name': gettext('MYT'),
+        'fallbacks': ['en'],
+        'public': True,
+       },
+      ],    
 
+
+
+
+
+}
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
