@@ -15,13 +15,13 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(PROJECT_PATH, 'database.sqlite'),                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'myt',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'USER': 'myt_root',
+        'PASSWORD': '17097448ak',
+        'HOST': '192.168.77.104',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '3306',                      # Set to empty string for default.
     }
 }
 
@@ -98,7 +98,7 @@ TEMPLATE_LOADERS = (
 )
 CMS_TEMPLATES = (
     ('template_1.html', 'Template One'),
-    ('template_2.html', 'Template Two'),
+    ('myt.html', 'Main Page'),
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -156,14 +156,14 @@ INSTALLED_APPS = (
     'sekizai',
     'cms.plugins.file',
     'cms.plugins.flash',
-    'cms.plugins.googlemap',
+#    'cms.plugins.googlemap',
     'cms.plugins.link',
     'cms.plugins.picture',
-    'cms.plugins.snippet',
-    'cms.plugins.teaser',
-    'cms.plugins.text',
-    'cms.plugins.video',
-    'cms.plugins.twitter',
+#    'cms.plugins.snippet',
+#    'cms.plugins.teaser',
+#    'cms.plugins.text',
+#    'cms.plugins.video',
+#    'cms.plugins.twitter',
 )
 CMS_LANGUAGES = {
     1:[

@@ -4,9 +4,8 @@
   <head>
       {% render_block "css" %}
   </head>
-  <body>
+  <body style="margin:0px"> 
       {% cms_toolbar %}
-      {% placeholder base_content %}
       {% block base_content %}{% endblock %}
       {% render_block "js" %}
   </body>

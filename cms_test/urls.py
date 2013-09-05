@@ -17,13 +17,14 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),a
+    (r'^page_info', 'cms_test.get_data.page_info'),
     (r'^admin/', include(admin.site.urls)),
     url(r'^', include('cms.urls')),
 )
 
-if settings.DEBUG:
-    urlpatterns = patterns('',
-    url(r'media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root':settings.MEDIA_ROOT, 'show_indexs': True}),
-    url(r'', include('django.contrib.staticfiles.urls')),
-) + urlpatterns    
+#if settings.DEBUG:
+#    urlpatterns = patterns('',
+#    url(r'media/(?P<path>.*)$', 'django.views.static.serve',
+#        {'document_root':settings.MEDIA_ROOT, 'show_indexs': True}),
+#    url(r'', include('django.contrib.staticfiles.urls')),
+#) + urlpatterns    
